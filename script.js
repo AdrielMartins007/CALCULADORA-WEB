@@ -1,6 +1,7 @@
 let tela = document.getElementById("tela-resultado");
+let expressao = 0;
 
-let expressao = "";
+tela.value = 0;
 
 function adicionar(valor){
     expressao += valor;
@@ -9,7 +10,7 @@ function adicionar(valor){
 
 function limpar(){
     expressao = "";
-    tela.value = "";
+    tela.value = 0;
 }
 
 function calcular(){
@@ -21,3 +22,9 @@ function calcular(){
         expressao = "";
     }
 }
+
+function apagar(){
+    expressao = expressao.slice(0, -1);
+    tela.value = expressao;
+}
+    
